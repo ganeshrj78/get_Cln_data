@@ -55,6 +55,7 @@ melted <- melt(final, id = c("subject", "activity"))
 castedTab <- dcast(melted, subject + activity ~ variable, mean)
 
 # Write the data to tidyData.txt
-write.table(castedTab, "tidyData.txt")
+##write.table(castedTab, "tidyData.txt")
+write.table(castedTab, "tidyData.txt", row.names = FALSE)
 
 
